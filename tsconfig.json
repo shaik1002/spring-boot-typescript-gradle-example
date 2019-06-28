@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"alwaysStrict": true,
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noEmitOnError": true,
+		"noImplicitAny": true,
+		"removeComments": true,
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"target": "es2015",
+		"outDir": "build"
+	},
+	"include": [
+		"src/main/scripts/**/*.ts"
+	]
+}
