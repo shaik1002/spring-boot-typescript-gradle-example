@@ -1,7 +1,7 @@
 {
   "name": "spring boot typescript example",
   "version": "1.0.0",
-  "dependencies": {
-    "typescript": "3.4.5"
+  "devDependencies": {
+    "tsc": "3.4.5"
   }
 }
