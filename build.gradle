@@ -4,21 +4,18 @@ plugins {
     id "com.moowork.node" version "1.2.0"
     id 'jacoco'
 }
+
 jacoco {
-    toolVersion = "0.8.7"
+    toolVersion = "0.8.8" // Use the latest version
 }
 
 jacocoTestReport {
+    dependsOn test
     reports {
-        xml.required.set(true)
-        csv.required.set(true)
-        html.required.set(true)
-        html.destination file("${buildDir}/reports/html/jacoco")
-        xml.destination file("${buildDir}/reports/xml/jacoco")
-        csv.destination file("${buildDir}/reports/csv/jacoco")
+        xml.required = true
+        html.required = true
     }
 }
-
 node {
     version = "10.16.0"
     download = true
