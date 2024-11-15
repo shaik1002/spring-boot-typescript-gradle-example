@@ -2,6 +2,21 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.1.5.RELEASE'
     id "com.moowork.node" version "1.2.0"
+    id 'jacoco'
+}
+jacoco {
+    toolVersion = "0.8.7"
+}
+
+jacocoTestReport {
+    reports {
+        xml.required.set(true)
+        csv.required.set(true)
+        html.required.set(true)
+        html.destination file("${buildDir}/reports/html/jacoco")
+        xml.destination file("${buildDir}/reports/xml/jacoco")
+        csv.destination file("${buildDir}/reports/csv/jacoco")
+    }
 }
 
 node {
