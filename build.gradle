@@ -17,6 +17,7 @@ repositories {
 
 bootJar {
     archiveBaseName = 'application'
+    mainClassName = 'example.Application' // Ensure this matches your package and class name
 }
 
 task installTsc(type: NpmTask) {
